@@ -6,7 +6,7 @@ import {
   Typography
 } from '@mui/material';
 
-const API_URL = `${process.env.REACT_APP_API_URL}/api` || 'https://3ed0-103-88-237-251.ngrok-free.app'; 
+const API_URL = `${process.env.REACT_APP_API_URL}` || 'https://3ed0-103-88-237-251.ngrok-free.app'; 
 
 function VideoAnalysisPage() {
   const [selectedFile, setSelectedFile] = useState(null);
