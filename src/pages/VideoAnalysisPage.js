@@ -316,6 +316,7 @@ function VideoAnalysisPage() {
                               key={frameIndex}
                               src={`${API_URL}/inferred_frames/${frame.saved_frame_path}`}
                               alt={`Representative frame ${frameIndex + 1} for segment ${index + 1}`}
+                              crossOrigin="anonymous"  // <--- Add this
                               style={{ maxHeight: '400px', maxWidth: '400px', border: '1px solid #ddd', borderRadius: '4px' }}
                             />
                           ))}
@@ -350,6 +351,7 @@ function VideoAnalysisPage() {
                           src={`${API_URL}/inferred_frames/${fullPath}`} 
                           alt="Frame with most detections"
                           className="best-frame-image"
+                          crossOrigin="anonymous"  // <--- Add this
                           onError={(e) => {
                             console.error("Best frame image failed to load:", e);
                             e.target.style.display = 'none';
@@ -382,6 +384,7 @@ function VideoAnalysisPage() {
                             src={`${API_URL}/inferred_frames/${fullPath}`}
                             alt="Frame with suspicious objects"
                             className="suspicious-frame-image"
+                            crossOrigin="anonymous"  // <--- Add this
                             onError={(e) => {
                               console.error("Suspicious frame image failed to load:", e);
                               e.target.style.display = 'none';
@@ -443,4 +446,4 @@ function VideoAnalysisPage() {
   );
 }
 
-export default VideoAnalysisPage; 
+export default VideoAnalysisPage;
