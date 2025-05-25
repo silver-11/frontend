@@ -349,7 +349,7 @@ function VideoAnalysisPage() {
                     return (
                       <div key={index} className="best-frame-wrapper">
                         <img 
-                          src={`http://localhost:5000/proxy_inferred_frame/${fullPath}`}
+                          src={`http://localhost:5000/inferred_video_frames_output/${fullPath}`}
 
                           //src={`${API_URL}/inferred_frames/${fullPath}`} 
                           alt="Frame with most detections"
