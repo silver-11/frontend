@@ -315,6 +315,7 @@ function VideoAnalysisPage() {
                             <img
                               key={frameIndex}
                               src={`${API_URL}/inferred_frames/${frame.saved_frame_path}`}
+                              
                               alt={`Representative frame ${frameIndex + 1} for segment ${index + 1}`}
                               crossOrigin="anonymous"  // <--- Add this
                               style={{ maxHeight: '400px', maxWidth: '400px', border: '1px solid #ddd', borderRadius: '4px' }}
@@ -348,7 +349,9 @@ function VideoAnalysisPage() {
                     return (
                       <div key={index} className="best-frame-wrapper">
                         <img 
-                          src={`${API_URL}/inferred_frames/${fullPath}`} 
+                          src={`http://localhost:5000/proxy_inferred_frame/${fullPath}`}
+
+                          //src={`${API_URL}/inferred_frames/${fullPath}`} 
                           alt="Frame with most detections"
                           className="best-frame-image"
                           crossOrigin="anonymous"  // <--- Add this
