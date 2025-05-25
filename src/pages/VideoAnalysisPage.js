@@ -364,7 +364,7 @@ function VideoAnalysisPage() {
                             e.target.parentNode.appendChild(errorDiv);
                           }}
                         />
-                        <p className="frame-path">Path: `${API_URL}/inferred_frames/${fullPath}`</p>
+                        <p className="frame-path">Path: {API_URL}/inferred_frames/{fullPath}</p>
                       </div>
                     );
                   }
@@ -397,7 +397,7 @@ function VideoAnalysisPage() {
                               e.target.parentNode.appendChild(errorDiv);
                             }}
                           />
-                          <p className="frame-path">Path: `${API_URL}/inferred_frames/${fullPath}`</p>
+                          <p className="frame-path">Path: {API_URL}/inferred_frames/{fullPath}</p>
                         </div>
                       );
                     }
