@@ -314,7 +314,7 @@ function VideoAnalysisPage() {
                           {segment.representative_frames.map((frame, frameIndex) => (
                             <img
                               key={frameIndex}
-                              src={`${API_URL}/inferred_video_frames_output/${frame.saved_frame_path}`}
+                              src={`http://localhost:5000/inferred_video_frames_output/${frame.saved_frame_path}`}
                               
                               alt={`Representative frame ${frameIndex + 1} for segment ${index + 1}`}
                               crossOrigin="anonymous"  // <--- Add this
@@ -384,7 +384,7 @@ function VideoAnalysisPage() {
                       return (
                         <div key={index} className="suspicious-frame-item">
                           <img 
-                            src={`${API_URL}/inferred_video_frames_output/${fullPath}`}
+                            src={`http://localhost:5000/inferred_video_frames_output/${fullPath}`}
                             alt="Frame with suspicious objects"
                             className="suspicious-frame-image"
                             crossOrigin="anonymous"  // <--- Add this
